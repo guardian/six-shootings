@@ -67,27 +67,8 @@
 
             @include mq(tablet) {
                 margin-top: 0;
-                position: absolute;
-                transform: rotate(-90deg);
-                bottom: 0;
-                left: -4px;
                 transform-origin: left bottom;
                 width: 80%;
-            }
-        }
-
-        .element-image__caption {
-            position: absolute;
-            top: 10px;
-            left: -8px;
-            font-family: 'Guardian Egyptian Condensed';
-            font-size: 20px;
-            color: $c-black !important;
-            background-color: $c-white;
-            padding: 4px 8px;
-
-            @include mq(mobileLandscape) {
-                left: -18px;
             }
         }
     }
@@ -151,14 +132,13 @@
     }
 
     h2 {
-        font-family: 'Guardian Egyptian Condensed';
+        font-family: 'Guardian Egyptian Web';
         font-size: 24px;
-        color: $c-black !important;
+        color: $c-purple !important;
         font-weight: normal;
         background-color: $c-white;
         padding: 3px 4px;
         display: inline-block;
-        padding: 0 8px;
         line-height: 1.4;
         margin-bottom: 12px;
 
@@ -167,17 +147,17 @@
         }
     }
 
-    .cia__drop-cap {
-        font-family: 'Guardian Egyptian Condensed';
+    .six__drop-cap {
+        font-family: 'Guardian Egyptian Web';
         display: inline-block;
         text-transform: uppercase;
         float: left;
-        color: $c-black;
+        color: $c-purple;
         margin-right: 6px;
         height: 4.3em;
     }
 
-    .cia__drop-inner {
+    .six__drop-inner {
         font-size: 5.4em;
         line-height: 0.85;
     }
@@ -189,17 +169,15 @@
     p > a {
         background-color: $c-white !important;
         background-image: none !important;
-        padding: 4px;
         color: $c-black !important;
-        border-bottom: 0 !important;
+        border-bottom: 1px solid $c-purple !important;
         box-shadow: none !important;
         text-shadow: none !important;
 
         &:hover {
-            color: $c-white !important;
-            background-color: $c-black !important;
+            color: $c-purple !important;
             text-decoration: none !important;
-            border-bottom: 0 !important;
+            border-bottom: 1px solid $c-purple !important;
             box-shadow: none !important;
         }
     }

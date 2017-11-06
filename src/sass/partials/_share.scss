@@ -1,9 +1,5 @@
-.cia-share {
-    position: absolute;
-    z-index: 4;
+.six-share {
     margin: 0;
-    right: 10px;
-    bottom: 8px;
     padding: 0;
     list-style: none;
     overflow: hidden;
@@ -33,7 +29,7 @@
     }
 }
 
-.cia-share__button {
+.six-share__button {
     width: 30px;
     height: 30px;
     float: left;
@@ -51,7 +47,7 @@
     }
 }
 
-.cia-share__button--facebook {
+.six-share__button--facebook {
     background-color: $c-facebook;
 
     &:hover {
@@ -59,7 +55,7 @@
     }
 }
 
-.cia-share__button--twitter {
+.six-share__button--twitter {
     background-color: $c-twitter;
 
     &:hover {
