@@ -133,17 +133,22 @@
 
     h2 {
         font-family: 'Guardian Egyptian Web';
-        font-size: 24px;
-        color: $c-purple !important;
-        font-weight: normal;
+        font-size: 20px;
+        color: $c-black !important;
+        font-weight: normal !important;
         background-color: $c-white;
-        padding: 3px 4px;
         display: inline-block;
         line-height: 1.4;
         margin-bottom: 12px;
 
         @include mq(tablet) {
-            font-size: 34px;
+            font-size: 26px;
+            line-height: 1.2;
+        }
+
+        @include mq(desktop) {
+            font-size: 36px;
+            line-height: 1.1;
         }
     }
 

@@ -23,7 +23,7 @@ module.exports = {
 
     checkEntries: function() {
         $('.six__quote').each(function(index, value) {
-            if (scrollTop > $(value).offset().top - ((height / 4) * 3)) {
+            if (scrollTop > $(value).offset().top - (height / 2)) {
                 if (!$(value).hasClass('is-visible') && !$('.six__quotes').hasClass('is-animating')) {
                     $(value).addClass('is-visible');
                     $('.six__quotes').addClass('is-animating');
