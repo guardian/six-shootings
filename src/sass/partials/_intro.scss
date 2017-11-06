@@ -26,9 +26,26 @@
     transition: opacity 0.4s ease-in;
     max-width: 480px;
 
+    @include mq(tablet) {
+        font-size: 26px;
+        line-height: 1.2;
+    }
+
     @include mq(desktop) {
         font-size: 36px;
         line-height: 1.1;
+    }
+}
+
+.six__header-content {
+    max-width: 620px;
+
+    @include mq(leftCol) {
+        padding-left: 160px;
+    }
+
+    @include mq(wide) {
+        padding-left: 240px;
     }
 }
 
@@ -39,6 +56,15 @@
     font-weight: bold;
     color: $c-purple;
     margin-top: 6px;
+
+    @include mq(tablet) {
+        font-size: 64px;
+    }
+
+    @include mq(desktop) {
+        font-size: 88px;
+        line-height: 1;
+    }
 }
 
 .six__standfirst {
@@ -46,6 +72,16 @@
     font-size: 20px;
     line-height: 1.3;
     color: $c-black !important;
+
+    @include mq(tablet) {
+        font-size: 26px;
+        line-height: 1.2;
+    }
+
+    @include mq(desktop) {
+        font-size: 36px;
+        line-height: 1.1;
+    }
 
     span {
         display: block;
