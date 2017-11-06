@@ -1,0 +1,68 @@
+.cia-share {
+    position: absolute;
+    z-index: 4;
+    margin: 0;
+    right: 10px;
+    bottom: 8px;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+
+    @include mq(mobileLandscape) {
+        right: 20px;
+    }
+
+    @include mq(desktop) {
+        right: 120px;
+        bottom: 0px;
+    }
+
+    @include mq(leftCol) {
+        right: 140px;
+    }
+
+    @include mq(wide) {
+        right: 160px;
+    }
+
+    .svg {
+        fill: $c-white;
+        width: 100%;
+        height: 100%;
+        margin: auto;
+    }
+}
+
+.cia-share__button {
+    width: 30px;
+    height: 30px;
+    float: left;
+    margin-right: 4px;
+    border-radius: 40px;
+    background-color: $c-dark-grey;
+
+    @include mq(desktop) {
+        width: 38px;
+        height: 38px;
+    }
+
+    &:hover {
+        background-color: darken($c-dark-grey, 5%);
+    }
+}
+
+.cia-share__button--facebook {
+    background-color: $c-facebook;
+
+    &:hover {
+        background-color: darken($c-facebook, 5%);
+    }
+}
+
+.cia-share__button--twitter {
+    background-color: $c-twitter;
+
+    &:hover {
+        background-color: darken($c-twitter, 5%);
+    }
+}
