@@ -14,11 +14,6 @@ module.exports = {
             this.setValues();
             this.checkEntries();
         }.bind(this));
-
-        $(window).resize(function() {
-            this.setValues();
-            this.reCalcHeights();
-        }.bind(this));
     },
 
     setValues: function() {
@@ -27,55 +22,17 @@ module.exports = {
     },
 
     checkEntries: function() {
-        $('.cia__entry').each(function(index, value) {
+        $('.six__quote').each(function(index, value) {
             if (scrollTop > $(value).offset().top - ((height / 4) * 3)) {
-                if (!$(value).hasClass('is-visible')) {
-                    if (!$('.is-typing').length) {
-                        this.typeEntry(value);
-                    }
+                if (!$(value).hasClass('is-visible') && !$('.six__quotes').hasClass('is-animating')) {
+                    $(value).addClass('is-visible');
+                    $('.six__quotes').addClass('is-animating');
+
+                    setTimeout(function() {
+                        $('.six__quotes').removeClass('is-animating')
+                    }, 800);
                 }
             }
         }.bind(this));
     },
-
-    typeEntry: function(entry) {
-        var copy = $(entry).text();
-        var typed = 0;
-
-        $('.is-latest').removeClass('is-latest');
-        $(entry).height($(entry).height());
-        $(entry).text('');
-        $(entry).addClass('is-visible');
-        $(entry).addClass('is-typing');
-
-        var interval = setInterval(function() {
-            var newChar = copy.substring(typed, typed + 1);
-            if (newChar === '*') {
-                newChar = '<span class=\'cia__pixels cia__pixels--' + Math.floor((Math.random() * 6) + 1) +'\'>*</span>';
-            }
-
-            typed++;
-
-            if (newChar === '/') {
-                $(entry).html('<span class=\'cia__date\'>' + $(entry).html() + '</span>');
-                $(entry).removeClass('has-date');
-            } else {
-                $(entry).html($(entry).html() + newChar);
-            }
-
-            if (typed === copy.length) {
-                clearInterval(interval);
-                $(entry).removeClass('is-typing');
-                $(entry).addClass('is-latest');
-                this.checkEntries();
-            }
-        }.bind(this), 15);
-    },
-
-    reCalcHeights: function() {
-        $('.cia__entry').each(function(index, value) {
-            $(value).attr('style', '');
-            $(value).height($(value).height());
-        });
-    }
 }

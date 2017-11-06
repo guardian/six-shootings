@@ -23,6 +23,7 @@
     background-repeat: no-repeat;
     background-position: left top;
     background-size: 2em;
+    opacity: 0;
     transition: opacity 0.4s ease-in;
     max-width: 480px;
 
@@ -32,6 +33,7 @@
     }
 
     @include mq(desktop) {
+        margin-top: 148px;
         font-size: 36px;
         line-height: 1.1;
     }
@@ -42,6 +44,10 @@
 
     @include mq(wide) {
         margin-left: 240px;
+    }
+
+    &.is-visible {
+        opacity: 1;
     }
 }
 
