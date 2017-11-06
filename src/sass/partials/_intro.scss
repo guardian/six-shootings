@@ -35,6 +35,14 @@
         font-size: 36px;
         line-height: 1.1;
     }
+
+    @include mq(leftCol) {
+        margin-left: 160px;
+    }
+
+    @include mq(wide) {
+        margin-left: 240px;
+    }
 }
 
 .six__header-content {
