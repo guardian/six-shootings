@@ -1,13 +1,14 @@
 .six__intro {
     background-color: $c-black;
     margin-bottom: 12px;
+    overflow: auto;
 }
 
 .six__quotes {
     margin: 0;
     padding: 0;
     list-style: none;
-    overflow: hidden;
+    overflow: visible;
 }
 
 .six__quote {
@@ -18,18 +19,17 @@
     color: $c-white;
     font-size: 20px;
     line-height: 1.3;
-    margin: 52px 0;
-    opacity: 0;
-    transition: opacity 0.4s ease-in;
+    margin: 82px 0;
     max-width: 480px;
 
     @include mq(tablet) {
+        margin: 128px 0;
         font-size: 26px;
         line-height: 1.2;
     }
 
     @include mq(desktop) {
-        margin: 128px 0;
+        margin: 200px 0;
         font-size: 36px;
         line-height: 1.1;
     }
@@ -41,24 +41,44 @@
     @include mq(wide) {
         margin-left: 240px;
     }
+}
 
-    &.is-visible {
-        opacity: 1;
-    }
+.six__quote span {
+    transition: opacity 0.4s ease-in;
+    opacity: 0;
+    transition-delay: .3s;
+}
+
+.six__quote.is-visible span {
+    opacity: 1;
 }
 
 .six__candle {
     position: absolute;
     z-index: -1;
-    width: 26px;
+    width: 18px;
     display: flex;
     flex-direction: column;
+    transition: opacity 0.4s ease-in;
+    opacity: 0;
+
+    @include mq(tablet) {
+        width: 26px;
+    }
+
+    .is-visible & {
+        opacity: 1;
+    }
 }
 
 .six__candle--1 {
-    left: -12px;
+    left: -4px;
     top: -36px;
     bottom: -12px;
+
+    @include mq(tablet) {
+        left: -12px;
+    }
 }
 
 .six__candle--2 {
@@ -120,7 +140,7 @@
 
 .six__headline {
     font-family: 'Guardian Egyptian Web';
-    font-size: 32px;
+    font-size: 38px;
     line-height: 1.1;
     font-weight: bold;
     color: $c-yellow;
@@ -146,6 +166,7 @@
     line-height: 1.3;
     font-weight: 200;
     color: $c-white !important;
+    margin-bottom: 12px;
 
     @include mq(tablet) {
         font-size: 26px;
@@ -155,6 +176,7 @@
     @include mq(desktop) {
         font-size: 36px;
         line-height: 1.1;
+        margin-bottom: 18px;
     }
 
     span {
