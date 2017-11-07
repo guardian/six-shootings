@@ -94,19 +94,19 @@
 @keyframes flicker {
     0% {
         opacity: .9;
-        transform: translateX(0px) translateY(0px) scale(.95);
+        transform: scale(.95);
     }
     20% {
         opacity: .8;
-        transform: translateX(-1px) translateY(0px) scale(1);
+        transform: scale(1);
     }
     60% {
         opacity: 1;
-        transform: translateX(1px) translateY(-1px) scale(.95);
+        transform: scale(.95);
     }
     100% {
         opacity: .8;
-        transform: translateX(0px) translateY(1px) scale(1);
+        transform: scale(1);
     }
 }
 
@@ -116,7 +116,7 @@
     width: 100%;
     max-width: 20px;
     margin: 0 auto 3px;
-    animation: flicker .5s steps(4) infinite;
+    animation: flicker .8s steps(4) infinite;
     transform-origin: bottom center;
 }
 
@@ -194,6 +194,27 @@
                 border-bottom-color: $c-white;
                 text-decoration: none;
             }
+        }
+    }
+}
+
+.six__subhead {
+    font-weight: 200;
+
+    strong, span {
+        display: block;
+        color: $c-yellow;
+    }
+
+    location {
+        display: block;
+        color: $c-black;
+        font-size: 20px;
+        line-height: 1.2;
+
+        span {
+            display: inline;
+            color: $c-dark-grey;
         }
     }
 }
