@@ -157,7 +157,7 @@
         display: inline-block;
         text-transform: uppercase;
         float: left;
-        color: $c-purple;
+        color: $c-yellow;
         margin-right: 6px;
         height: 4.3em;
     }
@@ -175,14 +175,14 @@
         background-color: $c-white !important;
         background-image: none !important;
         color: $c-black !important;
-        border-bottom: 1px solid $c-purple !important;
+        border-bottom: 1px solid $c-yellow !important;
         box-shadow: none !important;
         text-shadow: none !important;
 
         &:hover {
-            color: $c-purple !important;
+            color: $c-yellow !important;
             text-decoration: none !important;
-            border-bottom: 1px solid $c-purple !important;
+            border-bottom: 1px solid $c-yellow !important;
             box-shadow: none !important;
         }
     }
