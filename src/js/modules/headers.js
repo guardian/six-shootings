@@ -10,12 +10,22 @@ module.exports = {
     enhanceHeaders: function() {
         $('.content__main h2').each(function(index, element) {
             var text = $(element).text().split('.');
-            console.log(text);
+                text = {
+                    name: text[0],
+                    bio: text[1],
+                    incident: text[2],
+                    location: text[3],
+                    year: text[4]
+                }
 
-            if (text.length >= 5) {
-                $(element).addClass('six__subhead');
-                $(element).html('<strong>' + text[0] + '</strong><span>' + text[1] + '</span><location>' + text[2] + '<span>' + text[3] + '</span><br />' + text[4] + '</location>');
+            var html = '';
+
+            for (var i in text) {
+                html += '<span class=\'six__subhead-' + i + '\'>' + text[i] + '</span>';
             }
+
+            $(element).addClass('six__subhead');
+            $(element).html(html);
         }.bind(this));
     }
 }
