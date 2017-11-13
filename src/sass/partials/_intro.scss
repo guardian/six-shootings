@@ -183,7 +183,7 @@
         display: block;
         color: $c-dark-grey;
         font-size: 20px;
-        font-weight: normal;
+        font-weight: 200;
         margin: 4px 0;
 
         a {
@@ -191,7 +191,7 @@
             border-bottom: 1px solid $c-yellow;
 
             &:hover {
-                border-bottom-color: $c-white;
+                color: $c-yellow;
                 text-decoration: none;
             }
         }
@@ -209,7 +209,7 @@
     .six__subhead-bio {
         font-size: 32px;
         line-height: 1.1;
-        color: $c-yellow;
+        color: darken($c-yellow, 3%);
     }
 
     .six__subhead-name {

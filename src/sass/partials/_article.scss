@@ -157,7 +157,7 @@
         display: inline-block;
         text-transform: uppercase;
         float: left;
-        color: $c-yellow;
+        color: darken($c-yellow, 3%);
         margin-right: 6px;
         height: 4.3em;
     }
@@ -175,14 +175,14 @@
         background-color: $c-white !important;
         background-image: none !important;
         color: $c-black !important;
-        border-bottom: 1px solid $c-yellow !important;
+        border-bottom: 1px solid darken($c-yellow, 3%) !important;
         box-shadow: none !important;
         text-shadow: none !important;
 
         &:hover {
-            color: $c-yellow !important;
+            color: darken($c-yellow, 3%) !important;
             text-decoration: none !important;
-            border-bottom: 1px solid $c-yellow !important;
+            border-bottom: 1px solid darken($c-yellow, 3%) !important;
             box-shadow: none !important;
         }
     }

@@ -1,17 +1,17 @@
 var $ = require('../vendor/jquery.js');
 
 var pageUrl = window.location.href.split('#')[0],
-    title = 'Inside the CIA\'s black site torture room';
+    title = 'The Strong: six stories of anguish and endurance from some of America\'s worst mass shootings';
 
 module.exports =  {
     init: function() {
-        this.setLinks('.cia-share');
+        this.setLinks('.six-share');
     },
 
     setLinks: function(parent) {
-        $(parent + ' .cia-share__button--twitter a').attr('href', this.getTwitterLink());
-        $(parent + ' .cia-share__button--facebook a').attr('href', this.getFacebookLink());
-        $(parent + ' .cia-share__button--email a').attr('href', this.getEmailLink());
+        $(parent + ' .six-share__button--twitter a').attr('href', this.getTwitterLink());
+        $(parent + ' .six-share__button--facebook a').attr('href', this.getFacebookLink());
+        $(parent + ' .six-share__button--email a').attr('href', this.getEmailLink());
         console.log(this.getTwitterLink());
     },
 
