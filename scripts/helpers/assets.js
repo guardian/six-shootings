@@ -106,6 +106,8 @@ module.exports = {
     },
 
     preview: function(path, isDeploy, assetPath) {
+        handlebars.registerPartial('article', fs.readFileSync('./scripts/article.html', 'utf8'));
+
         var guardianHtml = fs.readFileSync('./scripts/immersive.html', 'utf8');
         var guardianTemplate = handlebars.compile(guardianHtml);
 
