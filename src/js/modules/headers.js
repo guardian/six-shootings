@@ -21,7 +21,7 @@ module.exports = {
             var html = '';
 
             for (var i in text) {
-                html += '<span class=\'six__subhead-' + i + '\'>' + text[i] + '</span>';
+                html += '<div class=\'six__subhead-' + i + '\'>' + text[i] + '</div>';
             }
 
             $(element).addClass('six__subhead');

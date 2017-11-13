@@ -27,27 +27,21 @@
         display: none;
     }
 
-    .element--supporting {
+    .element--thumbnail {
         margin-bottom: 12px !important;
-        width: 140px !important;
-        float: left;
+        width: 100% !important;
+        float: none !important;
         margin-top: 0 !important;
-        margin-right: 10px !important;
-
-        @include mq(mobileLandscape) {
-            margin-right: 20px !important;
-        }
+        margin-right: 0 !important;
 
         @include mq(tablet) {
-            width: 220px !important;
+            width: 300px !important;
+            margin-left: 10px !important;
+            float: right !important;
         }
 
         @include mq(leftCol) {
-            margin-left: 80px !important;
-        }
-
-        @include mq(wide) {
-            margin-left: 160px !important;
+            width: 420px !important;
         }
     }
 
@@ -112,6 +106,18 @@
         }
     }
 
+    .element-interactive {
+        max-width: 620px;
+
+        @include mq(leftCol) {
+            margin-left: 160px;
+        }
+
+        @include mq(wide) {
+            margin-left: 240px;
+        }
+    }
+
     .figure__caption__icon {
         display: none !important;
     }
@@ -154,6 +160,7 @@
 
     .six__drop-cap {
         font-family: 'Guardian Egyptian Web';
+        font-weight: bold;
         display: inline-block;
         text-transform: uppercase;
         float: left;

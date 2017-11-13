@@ -92,7 +92,7 @@
 }
 
 @keyframes flicker {
-    0% {
+    0%, 100% {
         opacity: .9;
         transform: scale(.95);
     }
@@ -104,7 +104,7 @@
         opacity: 1;
         transform: scale(.95);
     }
-    100% {
+    80% {
         opacity: .8;
         transform: scale(1);
     }
@@ -116,7 +116,7 @@
     width: 100%;
     max-width: 20px;
     margin: 0 auto 3px;
-    animation: flicker .8s steps(4) infinite;
+    animation: flicker 3s steps(4) infinite;
     transform-origin: bottom center;
 }
 
@@ -200,27 +200,44 @@
 
 .six__subhead {
     font-weight: 200;
-
-    span {
-        display: block;
-    }
+    overflow: auto;
 
     .six__subhead-name,
     .six__subhead-bio {
         font-size: 32px;
         line-height: 1.1;
         color: darken($c-yellow, 3%);
+
+        @include mq(desktop) {
+            font-size: 42px;
+            line-height: 1;
+        }
     }
 
     .six__subhead-name {
         font-weight: bold;
     }
 
+    .six__subhead-bio {
+        margin-bottom: 5px;
+    }
+
     .six__subhead-location,
     .six__subhead-year,
     .six__subhead-incident {
-        font-size: 20px;
+        font-family: 'Guardian Text Sans Web';
+        font-size: 16px;
+        float: left;
+        margin-right: 3px;
         color: $c-black;
         line-height: 1.1;
+    }
+
+    .six__subhead-incident,
+    .six__subhead-location {
+        &:after {
+            content: ' | ';
+            color: $c-grey;
+        }
     }
 }
