@@ -41,7 +41,12 @@
         }
 
         @include mq(leftCol) {
-            width: 420px !important;
+            position: absolute !important;
+            right: 0;
+        }
+
+        @include mq(wide) {
+            width: 380px !important;
         }
     }
 
@@ -195,9 +200,9 @@
     }
 
     // app stuff
-        figure.element.element-image.figure-wide {
-            margin: 0;
-        }
+    figure.element.element-image.figure-wide {
+        margin: 0;
+    }
 
     figure.element.element-image.element--supporting.figure-wide {
         margin-left: 0 !important;

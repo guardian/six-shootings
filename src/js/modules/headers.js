@@ -8,7 +8,7 @@ module.exports = {
     },
 
     enhanceHeaders: function() {
-        $('.content__main h2').each(function(index, element) {
+        $('.content__main h2, .from-content-api h2').each(function(index, element) {
             var text = $(element).text().split('.');
                 text = {
                     name: text[0],
