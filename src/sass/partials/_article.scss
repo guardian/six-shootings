@@ -164,6 +164,7 @@
     }
 
     .six__drop-cap {
+        position: relative;
         font-family: 'Guardian Egyptian Web';
         font-weight: bold;
         display: inline-block;
@@ -174,7 +175,17 @@
         height: 4.3em;
     }
 
+    .six__drop-image {
+        position: absolute;
+        z-index: 2;
+        top: -8px;
+        left: -8px;
+        height: 115%;
+    }
+
     .six__drop-inner {
+        position: relative;
+        z-index: 3;
         font-size: 5.3em;
         line-height: 0.96;
     }

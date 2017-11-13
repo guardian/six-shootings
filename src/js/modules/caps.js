@@ -21,6 +21,6 @@ module.exports = {
 
     enhanceCap: function(paragraph) {
         var html = $(paragraph).html().trim();
-        $(paragraph).html('<span class="six__drop-cap"><span class="six__drop-inner">' + html[0] + '</span></span>' + html.slice(1));
+        $(paragraph).html('<span class="six__drop-cap"><img src="@@assetPath@@/assets/images/candle.jpg" class="six__drop-image" /><span class="six__drop-inner">' + html[0] + '</span></span>' + html.slice(1));
     }
 }
