@@ -30,7 +30,7 @@ module.exports = {
         scrollTop = $(window).scrollTop();
 
         $('.six__quote').each(function(index, value) {
-            if (scrollTop > $(value).offset().top - quoteHeight) {
+            if (scrollTop > $(value).offset().top - (height / 2)) {
                 if (!$(value).hasClass('is-visible')) {
                     $(value).addClass('is-visible');
                 }
