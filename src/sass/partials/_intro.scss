@@ -43,31 +43,47 @@
     }
 }
 
-.six__quote span {
-    transition: opacity 0.4s ease-in;
-    opacity: 0;
-    transition-delay: .3s;
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
-.six__quote.is-visible span {
-    opacity: 1;
+.six__quote span {
+    opacity: 0;
+    animation: fade 0.4s ease-in forwards;
+    animation-delay: .3s;
 }
 
 .six__candle {
+    opacity: 0;
     position: absolute;
     z-index: -1;
     width: 18px;
     display: flex;
     flex-direction: column;
-    transition: opacity 0.4s ease-in;
-    opacity: 0;
+    animation: fade 0.4s ease-in forwards;
+    animation-delay: .3s;
 
     @include mq(tablet) {
         width: 26px;
     }
+}
 
-    .is-visible & {
-        opacity: 1;
+.six__quote--4 {
+    .six__candle,
+    &.six__quote span {
+        animation-delay: 1s;
+    }
+}
+
+.six__quote--5 {
+    .six__candle,
+    &.six__quote span {
+        animation-delay: 2s;
     }
 }
 
