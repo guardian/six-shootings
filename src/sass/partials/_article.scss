@@ -32,20 +32,16 @@
         width: 100% !important;
         float: none !important;
         margin-top: 0 !important;
+        margin-left: 0 !important;
         margin-right: 0 !important;
 
         @include mq(tablet) {
             width: 300px !important;
-            margin-left: 10px !important;
-            float: right !important;
+            margin-right: 10px !important;
+            float: left !important;
         }
 
         @include mq(leftCol) {
-            position: absolute !important;
-            right: 0;
-        }
-
-        @include mq(wide) {
             width: 380px !important;
         }
     }
@@ -170,7 +166,7 @@
         display: inline-block;
         text-transform: uppercase;
         float: left;
-        color: darken($c-yellow, 3%);
+        color: $c-darker-yellow;
         margin-right: 6px;
         height: 4.3em;
     }
@@ -198,14 +194,14 @@
         background-color: $c-white !important;
         background-image: none !important;
         color: $c-black !important;
-        border-bottom: 1px solid darken($c-yellow, 3%) !important;
+        border-bottom: 1px solid $c-darker-yellow !important;
         box-shadow: none !important;
         text-shadow: none !important;
 
         &:hover {
-            color: darken($c-yellow, 3%) !important;
+            color: $c-darker-yellow !important;
             text-decoration: none !important;
-            border-bottom: 1px solid darken($c-yellow, 3%) !important;
+            border-bottom: 1px solid $c-darker-yellow !important;
             box-shadow: none !important;
         }
     }

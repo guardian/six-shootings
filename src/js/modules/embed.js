@@ -17,10 +17,6 @@ module.exports = {
     },
 
     positionEmbed: function() {
-        if ($(window).width() > 720) {
-            $('.element--thumbnail').detach().insertAfter('.element-atom');
-        } else {
-            $('.element--thumbnail').detach().insertBefore('.element--showcase:first');
-        }
+
     }
 }

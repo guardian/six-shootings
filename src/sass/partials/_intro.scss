@@ -202,6 +202,7 @@
 .six__subhead {
     font-weight: 200;
     overflow: auto;
+    margin-bottom: 24px !important;
 
     @include mq(desktop) {
         margin-bottom: 32px !important;
@@ -211,7 +212,7 @@
     .six__subhead-bio {
         font-size: 32px;
         line-height: 1.1;
-        color: darken($c-yellow, 3%);
+        color: $c-darker-yellow;
 
         @include mq(desktop) {
             font-size: 42px;

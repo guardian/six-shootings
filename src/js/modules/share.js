@@ -1,7 +1,7 @@
 var $ = require('../vendor/jquery.js');
 
 var pageUrl = window.location.href.split('#')[0],
-    title = 'The Strong: six stories of anguish and endurance from some of America\'s worst mass shootings';
+    title = 'Stories of loss, love and hope: Six firsthand accounts from some of America\'s worst mass shootings';
 
 module.exports =  {
     init: function() {
