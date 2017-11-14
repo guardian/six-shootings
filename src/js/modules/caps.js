@@ -10,7 +10,7 @@ module.exports = {
     },
 
     enhanceCaps: function() {
-        $('.content__main h2').next().each(function(index, element) {
+        $('.ios .from-content-api h2, .android .from-content-api h2, .content__main h2').next().each(function(index, element) {
             if ($(element).is('p')) {
                 this.enhanceCap(element);
             }

@@ -12,6 +12,10 @@
         }
     }
 
+    &:first-child {
+        margin-top: inherit !important;
+    }
+
     p:first-letter {
         color: inherit !important;
         font-family: inherit !important;
@@ -184,6 +188,11 @@
         z-index: 3;
         font-size: 5.3em;
         line-height: 0.96;
+
+        .ios &,
+        .android & {
+            line-height: 0.7 !important;
+        }
     }
 
     p {
